@@ -1,0 +1,40 @@
+h1{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-variant: small-caps;
+}
+button{
+    height: 30px;
+    width: 70px;
+    text-align: center;
+    text-justify: center;
+    margin: 10px;
+    border-radius: 500px;
+    
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:rgb(238, 70, 70);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+.float:hover{
+    background-color:rgb(167, 11, 6);
+    cursor:pointer;
+}
+
+.my-float{
+	margin-top:22px;
+}

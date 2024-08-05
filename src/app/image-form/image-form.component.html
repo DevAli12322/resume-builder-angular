@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Resume/CV Design Example </title>
+    <!-- Style CSS -->
+    <!-- Demo CSS (No need to include it into your project) -->
+</head>
+
+<body>
+
+    <main class="cd__main">
+        <!-- Start DEMO HTML (Use the following code into your project)-->
+        <div class="resume">
+            <div class="resume_left">
+                <div class="resume_profile" style="height: 100px; width:100px;">
+                    <img src="file.jpg" alt="profile_pic">
+                </div>
+                <div class="resume_content">
+                    <div class="resume_item resume_info">
+                        <div class="title">
+                            <p class="bold">{{updateUserInfo.name}}</p>
+                            <p class="regular">Student</p>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-map-signs"></i>
+                                </div>
+                                <div class="data">
+                                    {{updateUserInfo.Address}} <br> Pakistan
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="data">
+                                    {{updateUserInfo.phoneNo}}
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="data">
+                                    {{updateUserInfo.email}}
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fab fa-weebly"></i>
+                                </div>
+                                <div class="data">
+                                    www.{{updateUserInfo.name | lowercase}}.com
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="resume_item resume_skills">
+                        <div class="title">
+                            <p class="bold">skill</p>
+                        </div>
+                        <ul>
+                            <li *ngFor="let items of updateSkillArray">
+                                <div class="skill_name">
+                                    {{items.skill}}
+                                </div>
+                                <div class="skill_progress">
+                                    <span [ngStyle]="{'width.%':items.progress}"></span>
+                                </div>
+                                <div class="skill_per">{{items.progress}}%</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="resume_item resume_social">
+                        <div class="title">
+                            <p class="bold">Social</p>
+                        </div>
+                        <ul>
+                            <li *ngFor="let item of updateSocialMediaArray">
+                                <div class="icon">
+                                    <i class="fab fa-facebook-square"></i>
+                                </div>
+                                <div class="data">
+                                    <p class="semi-bold">{{item.platform}}</p>
+                                    <p>{{item.username}}
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="resume_right">
+                <div class="resume_item resume_about">
+                    <div class="title">
+                        <p class="bold">About</p>
+                    </div>
+                    <p>{{updateHomepage.about}}</p>
+                </div>
+                <div class="resume_item resume_work">
+                    <div class="title">
+                        <p class="bold">Experience</p>
+                    </div>
+                    <ul>
+                        <li *ngFor="let item of updateExperience">
+                            <div class="date">{{item.fromDate}} - {{item.toDate}}</div>
+                            <div class="info">
+                                <p class="semi-bold">{{item.orgName}}</p>
+                                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="resume_item resume_education">
+                    <div class="title">
+                        <p class="bold">Education</p>
+                    </div>
+                    <ul>
+                        <li *ngFor="let item of updateEducation">
+                            <div class="date">{{item.fromDate}} - {{item.toDate}}</div>
+                            <div class="info">
+                                <p class="semi-bold">{{item.instName}}</p>
+                                <p>{{item.desc}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="resume_item resume_hobby">
+                    <div class="title">
+                        <p class="bold">Hobby</p>
+                    </div>
+                    <ul>
+                        <li *ngFor="let item of updateHobby">{{item.hobby}}</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- END EDMO HTML (Happy Coding!)-->
+    </main>
+
+
+
+
+
+</body>
+
+</html>

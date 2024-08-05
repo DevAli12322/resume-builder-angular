@@ -1,0 +1,24 @@
+<div class="comment-list">
+    <h2>Comments</h2>
+    <table>
+    <thead>
+    <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let comment of comments">
+    <td>{{ comment.id }}</td>
+    <td>{{ comment.name }}</td>
+    <td>{{ comment.email }}</td>
+    <td>{{ comment.body }}</td>
+    </tr>
+    </tbody>
+    </table>
+   </div>
+   
