@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ApiDataService } from '../api-data.service';
 import { InfoService } from '../info.service';
-import { CommentService } from '../list-info.service'
+import { CommentService } from '../list-info.service';
 
 @Component({
   selector: 'app-resume-listing',
@@ -11,15 +11,16 @@ import { CommentService } from '../list-info.service'
 })
 export class ResumeListingComponent {
   searchText: any;
+  router: any;
 
   constructor(private dataobj: ApiDataService, private info: InfoService, private commentService: CommentService) { }
   data: any;
   updateUserInfo: any; 
   mycomments: any;
+  sendData!:Comment;
   ngOnInit(): void {
     this.commentService.getComments().subscribe((comments) => {
       this.mycomments = comments;
-      console.log("comments");
       console.log(this.mycomments);
     });
 
@@ -36,9 +37,17 @@ export class ResumeListingComponent {
 
   onDelete(index: number): void {
     this.mycomments.splice(index, 1);
-    console.log(this.data);
+    this.commentService.deleteEmployee(index);
+    this.commentService.deletesocialMedia(index);
   }
-  
+  onEdit(sendData:any): void {
+    // this.router.navigate(['/edit']);
+    // this.commentService.editEmployee(index);
+    console.log("comments");
+    console.log(sendData);
+    this.commentService.setNewUserInfo(sendData);
+    // console.log(this.commentService.getEmployee(index, mycomment));
+  }
   
 
 

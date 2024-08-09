@@ -42,7 +42,7 @@
                     
                     <td>
                         <button style="height: 38px; width:69px" type="button"
-                            class="btn btn-outline-warning">Edit</button>
+                            class="btn btn-outline-warning" (click)="onEdit(item)" routerLink="/list/edit">Edit</button>
                         <button style="height: 38px; width:69px" type="button" class="btn btn-outline-danger"
                             (click)="onDelete(i)">Delete</button>
                     </td>

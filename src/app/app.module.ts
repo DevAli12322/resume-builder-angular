@@ -11,6 +11,7 @@ import { ResumeListingComponent } from './resume-listing/resume-listing.componen
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { CommentListComponent } from './comment-list/comment-list.component';
+import { EditFieldComponent } from './edit-field/edit-field.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,8 @@ import { CommentListComponent } from './comment-list/comment-list.component';
     ImageFormComponent,
     ResumeListingComponent,
     CommentListComponent,
+    EditFieldComponent,
+    EditFieldComponent,
   ],
   imports: [
     BrowserModule,
